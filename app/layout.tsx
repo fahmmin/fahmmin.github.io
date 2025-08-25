@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Anton, Roboto_Flex } from 'next/font/google';
 import { ReactLenis } from 'lenis/react';
+import { Analytics } from "@vercel/analytics/next"
 
 import 'lenis/dist/lenis.css';
 import './globals.css';
@@ -71,7 +72,10 @@ export default function RootLayout({
                         completely free.
                     </a> */}
                     <Navbar />
-                    <main>{children}</main>
+                    <main>
+                        <Analytics />
+                        {children}
+                    </main>
                     <Footer />
 
                     <CustomCursor />
