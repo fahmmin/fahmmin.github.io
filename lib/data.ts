@@ -5,19 +5,68 @@ export const GENERAL_INFO = {
 
     emailSubject: "Let's collaborate on a project",
     emailBody: 'Hi Fahmin, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/',
 };
 
 export const SOCIAL_LINKS = [
     { name: 'github', url: 'https://github.com/fahmmin' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/fahminmohammed' },
     { name: 'facebook', url: 'https://www.facebook.com/' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
 ];
 
 export const MY_STACK = {
+    web3: [
+        {
+            name: 'Hardhat',
+            icon: '/logo/hardhat.jpeg',
+        },
+        {
+            name: 'Chainlink',
+            icon: '/logo/chainlink.png',
+        },
+        {
+            name: 'Ethers',
+            icon: '/logo/ethers.jpg',
+        },
+        {
+            name: 'Zksync',
+            icon: '/logo/zksync.webp',
+        },
+        {
+            name: 'Viem',
+            icon: '/logo/viem.png',
+        },
+        {
+            name: 'Rainbowkit',
+            icon: '/logo/rainbowkit.avif',
+        },
+        {
+            name: 'Wagmi',
+            icon: '/logo/wagmi.png',
+        },
+    ],
+    language: [
+        {
+            name: 'Solidity',
+            icon: '/logo/solidity.png',
+        },
+
+        {
+            name: 'Python',
+            icon: '/logo/python.png',
+        },
+        {
+            name: 'Rust',
+            icon: '/logo/rust.png',
+        },
+        {
+            name: 'C',
+            icon: '/logo/c.jpeg',
+        },
+        {
+            name: 'Clarity',
+            icon: '/logo/clarity.png',
+        },
+    ],
     frontend: [
         {
             name: 'JavaScript',
@@ -36,10 +85,6 @@ export const MY_STACK = {
             icon: '/logo/next.png',
         },
         {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
             name: 'Tailwind CSS',
             icon: '/logo/tailwind.png',
         },
@@ -52,12 +97,8 @@ export const MY_STACK = {
             icon: '/logo/framer-motion.png',
         },
         {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
+            name: 'Lenis Protocol',
+            icon: '/logo/lenis.png',
         },
     ],
     backend: [
@@ -66,30 +107,22 @@ export const MY_STACK = {
             icon: '/logo/node.png',
         },
         {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
             name: 'Express.js',
             icon: '/logo/express.png',
         },
     ],
     database: [
         {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
-        {
-            name: 'PostgreSQL',
-            icon: '/logo/postgreSQL.png',
-        },
-        {
             name: 'MongoDB',
             icon: '/logo/mongodb.svg',
         },
         {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
+            name: 'IPFS',
+            icon: '/logo/ipfs.png',
+        },
+        {
+            name: 'Pinata',
+            icon: '/logo/pinata.png',
         },
     ],
     tools: [
@@ -105,11 +138,71 @@ export const MY_STACK = {
             name: 'AWS',
             icon: '/logo/aws.png',
         },
+        {
+            name: 'Vercel',
+            icon: '/logo/vercel.png',
+        },
+        {
+            name: 'Hardhat',
+            icon: '/logo/hardhat.jpeg',
+        },
+
     ],
 };
 
 export const PROJECTS: IProject[] = [
     {
+        title: 'E-Cell IIITNR',
+        slug: 'e-cell-website',
+        liveUrl: 'https://ecell.iiitnr.ac.in/',
+        year: 2025,
+        description: `
+        A complete website for E-Cell IIIT-NR to showcase their events, projects, and achievements. <br/> <br/>
+      
+      Key Features:<br/>
+      <ul>
+        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
+        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
+        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
+        <li>📱 Fully Responsive: Optimized for all device sizes</li>
+        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
+      </ul><br/>
+      
+      Technical Highlights:
+      <ul>
+        <li>Implemented complex slider synchronization logic using Swiper.js</li>
+        <li>Customized Payload CMS admin panel for intuitive content management</li>
+        <li>Developed reusable UI components with shadcn for design consistency</li>
+        <li>Configured efficient data fetching strategies in Next.js</li>
+      </ul>
+      `,
+        role: `
+      Full-Stack Developer <br/>
+      Owned the entire development lifecycle:
+      <ul>
+        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
+        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
+        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
+        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
+        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
+        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
+      </ul>
+      `,
+        techStack: [
+            'Next.js',
+            'Tailwind CSS',
+            'shadcn',
+            'Swiper.js',
+            'React Hook Form',
+            'Vercel',
+        ],
+        thumbnail: '/projects/images/e-cell-website.webp',
+        longThumbnail: '/projects/images/e-cell-website.webp',
+        images: [
+            '/projects/images/e-cell-website-1.webp',
+            '/projects/images/e-cell-website-2.webp',
+        ],
+    }, {
         title: 'Hex Oracle',
         slug: 'hex-oracle',
         liveUrl: 'https://hex-oracle.vercel.app/',
@@ -191,6 +284,31 @@ export const PROJECTS: IProject[] = [
         - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
         - Integrated multi-language support with React i18n, including RTL handling.<br/>
         - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
+    }, {
+        title: 'SAC Website',
+        slug: 'sac-website',
+        techStack: [
+            'Next.js',
+            'CSS',
+            'shadcn',
+            'Swiper.js',
+            'React Hook Form',
+            'Vercel',
+        ],
+        thumbnail: '/projects/images/sac-website-1.png',
+        longThumbnail: '/projects/images/sac-website-1.png',
+        images: [
+            '/projects/images/sac-website-1.png',
+            '/projects/images/sac-website-2.png',
+        ],
+        liveUrl: 'https://sac.iiitnr.ac.in/',
+        year: 2025,
+        description: `A complete website for SAC IIIT-NR to showcase their events, projects, and achievements.`,
+        role: `As the frontend developer, I: <br/>
+        - Built the frontend from scratch using Next.js, Tailwind CSS, and shadcn.<br/>
+        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
+        - Integrated multi-language support with React i18n, including RTL handling.<br/>
+        - Delivered a responsive, user-friendly interface.`,
     },
     {
         title: 'Repo Rewards',
@@ -217,35 +335,8 @@ export const PROJECTS: IProject[] = [
         - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
         - Integrated GPT-4 for AI-driven feedback and insights.<br/>
         - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
-    },
-    {
-        title: 'NFT Fractionalizer',
-        slug: 'nft-fractionalizer',
-        techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
-        ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.nft-fractionalizer.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
-    },
-    
+    }
+
 ];
 
 export const MY_EXPERIENCE = [
@@ -257,6 +348,15 @@ export const MY_EXPERIENCE = [
     {
         title: 'Vice Head',
         company: 'Dev Club IIITNR',
+        duration: 'Aug 2025 - Present',
+    },
+    {
+        title: 'E-Cell Website Head',
+        company: 'E-Cell IIITNR',
+        duration: 'Aug 2025 - Present',
+    }, {
+        title: 'SAC Website Head',
+        company: 'SAC IIITNR',
         duration: 'Aug 2025 - Present',
     },
 

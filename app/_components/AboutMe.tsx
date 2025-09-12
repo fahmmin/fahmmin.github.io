@@ -55,9 +55,7 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in a user centered design approach, ensuring that
-                    every project I work on is tailored to meet the specific
-                    needs of its users.
+                    I believe in a comprehensive development approach, seamlessly integrating web3, embedded systems, frontend, and backend technologies to deliver innovative solutions that meet the specific needs of every project.
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
@@ -73,10 +71,10 @@ const AboutMe = () => {
                     <div className="md:col-span-7">
                         <div className="text-lg text-muted-foreground max-w-[450px]">
                             <p className="slide-up-and-fade">
-                                I&apos;m a frontend web developer dedicated to
+                                I&apos;m a software developer dedicated to
                                 turning ideas into creative solutions. I
                                 specialize in creating seamless and intuitive
-                                user experiences.
+                                user experiences across web3 and web2.
                             </p>
                             <p className="mt-3 slide-up-and-fade">
                                 My approach focuses on creating scalable,
@@ -86,11 +84,15 @@ const AboutMe = () => {
                                 I strive to deliver experiences that not only
                                 engage users but also drive tangible results.
                             </p>
+                            needs and business objectives. By prioritizing
+                            performance, accessibility, and responsiveness,
+                            I strive to deliver experiences that not only
+                            engage users but also drive tangible results.
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
