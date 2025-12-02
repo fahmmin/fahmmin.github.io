@@ -41,9 +41,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <GoogleAnalytics gaId="G-MHLY1LNGY5" />
-            <Script id="hotjar" strategy="afterInteractive">
-                {`(function(h,o,t,j,a,r){
+            <body
+                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
+            >
+                <GoogleAnalytics gaId="G-MHLY1LNGY5" />
+                <Script id="hotjar" strategy="afterInteractive">
+                    {`(function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                 h._hjSettings={hjid:6380611,hjsv:6};
                 a=o.getElementsByTagName('head')[0];
@@ -51,10 +54,7 @@ export default function RootLayout({
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-            </Script>
-            <body
-                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
-            >
+                </Script>
                 <ReactLenis
                     root
                     options={{

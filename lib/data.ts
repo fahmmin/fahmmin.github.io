@@ -341,16 +341,18 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
+        title: 'AI Engineer',
+        company: 'Hastus Energy',
+        duration: 'Nov 2025 - Present',
+    }, {
         title: 'Software Engineer',
         company: 'RootVestors',
         duration: 'Jun 2025 - Present',
-    },
-    {
+    }, {
         title: 'Vice Head',
         company: 'Dev Club IIITNR',
         duration: 'Aug 2025 - Present',
-    },
-    {
+    }, {
         title: 'E-Cell Website Head',
         company: 'E-Cell IIITNR',
         duration: 'Aug 2025 - Present',
