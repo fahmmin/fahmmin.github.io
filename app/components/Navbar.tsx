@@ -31,43 +31,25 @@ export default function Navbar() {
     };
 
     return (
-        <div className="px-4 flex items-center justify-between">
-            <div className="flex flex-col my-8">
+        <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40 px-4 flex items-center justify-between py-4">
+            <div className="pr-8">
                 <Link
                     className="text-3xl font-playfair font-semibold pt-1 text-foreground hover:text-foreground/80 transition-colors"
                     href="/"
                 >
                     Fahmin.
                 </Link>
-                <div className="flex items-center gap-3 mt-1">
-                    <p className="text-muted-foreground text-xs">
-                        software developer
-                    </p>
-                    <div className="flex items-center gap-2">
-                        {SOCIAL_LINKS.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.url}
-                                target={link.name === 'email' ? undefined : "_blank"}
-                                rel={link.name === 'email' ? undefined : "noopener noreferrer"}
-                                className="text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                {getIcon(link.name)}
-                            </a>
-                        ))}
-                    </div>
-                </div>
             </div>
             <nav
                 aria-label="Main"
                 data-orientation="horizontal"
                 dir="ltr"
-                className="relative z-10 flex max-w-max flex-1 items-center justify-center"
+                className="relative z-10 flex w-full md:w-auto md:max-w-max md:flex-1 items-center justify-start md:justify-center"
             >
                 <div style={{ position: "relative" }}>
                     <ul
                         data-orientation="horizontal"
-                        className="group flex-1 list-none justify-center space-x-1 flex items-center gap-3"
+                        className="group flex-1 list-none justify-start md:justify-center space-x-1 flex flex-wrap items-center gap-3"
                         dir="ltr"
                     >
                         <Link
@@ -109,6 +91,7 @@ export default function Navbar() {
                 </div>
                 <div className="absolute left-0 top-full flex justify-center"></div>
             </nav>
+            
         </div>
     );
 }

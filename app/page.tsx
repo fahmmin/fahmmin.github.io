@@ -6,6 +6,10 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Link from "next/link";
 import GithubContributions from "./components/GithubContributions";
+import { SOCIAL_LINKS } from "@/lib/data";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -23,6 +27,29 @@ export default function Home() {
             </span>
             , specializing in agentic AI and high performance blockchain systems.
           </p>
+          <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
+            connect with me on
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            {SOCIAL_LINKS.map((link) => {
+              const Icon = link.name === 'github' ? FaGithub :
+                link.name === 'linkedin' ? FaLinkedin :
+                  link.name === 'X' ? FaXTwitter :
+                    link.name === 'email' ? MdEmail : null;
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target={link.name === 'email' ? undefined : "_blank"}
+                  rel={link.name === 'email' ? undefined : "noopener noreferrer"}
+                  className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-stone-400 hover:text-foreground transition-colors"
+                >
+                  {Icon && <Icon size={16} />}
+                  <span className="capitalize">{link.name}</span>
+                </a>
+              );
+            })}
+          </div>
           <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
             i work on building scalable systems on ethereum, focusing on consensus
             mechanisms, network protocols, and distributed architecture.
