@@ -18,9 +18,6 @@ export default function Home() {
         <div className="space-y-4">
           <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
             i&#x27;m a{" "}
-            <span className="text-gray-900 dark:text-stone-100">
-              20-year-old
-            </span>{" "}
             software developer based
             in{" "}
             <span className="text-gray-900 dark:text-stone-100 italic">
@@ -47,7 +44,7 @@ export default function Home() {
                   rel={link.name === 'email' ? undefined : "noopener noreferrer"}
                   className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-stone-400 hover:text-foreground transition-colors"
                 >
-                  {Icon && <Icon size={16} />}
+                  {Icon && <Icon size={20} />}
                   <span className="capitalize">{link.name}</span>
                 </a>
               );

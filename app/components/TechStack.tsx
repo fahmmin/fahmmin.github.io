@@ -2,29 +2,31 @@
 
 import {
     SiRust,
-    SiSolana,
-    SiGo,
     SiNextdotjs,
-    SiReact,
-    SiNodedotjs,
     SiTypescript,
-    SiVim,
     SiGit,
-    SiGithub
+    SiSolidity,
+    SiPython,
+    SiLangchain,
+    SiExpress,
+    SiEthereum,SiDocker,SiCloudflare,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 
 export default function TechStack() {
     const stack = [
+        { name: "Solidity", icon: SiSolidity },
+        { name: "Python", icon: SiPython },
+        { name: "Ethereum", icon: SiEthereum },
         { name: "Rust", icon: SiRust },
-        { name: "Solana", icon: SiSolana },
-        { name: "Go", icon: SiGo },
         { name: "Next.js", icon: SiNextdotjs },
-        { name: "React", icon: SiReact },
-        { name: "Node.js", icon: SiNodedotjs },
+        { name: "LangChain", icon: SiLangchain },
+        { name: "Docker", icon: SiDocker },
+        { name: "AWS", icon: FaAws },
+        { name: "Cloudflare", icon: SiCloudflare },
+        { name: "Express.js", icon: SiExpress },
         { name: "TypeScript", icon: SiTypescript },
-        { name: "Vim", icon: SiVim },
         { name: "Git", icon: SiGit },
-        { name: "GitHub", icon: SiGithub },
     ];
 
     return (
@@ -35,7 +37,7 @@ export default function TechStack() {
                     {stack.map((item) => (
                         <div key={item.name} className="relative group">
                             <item.icon
-                                className="w-4 h-4 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                                className="w-6 h-6 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                             />
                             <div className="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                                 <div className="w-2 h-2 bg-popover/80 backdrop-blur-md border-l border-t border-border rotate-45 -mb-1 mx-auto"></div>
