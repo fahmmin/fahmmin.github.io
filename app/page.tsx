@@ -21,12 +21,15 @@ export default function Home() {
             <span className="text-gray-900 dark:text-stone-100">
               20-year-old
             </span>{" "}
-            software developer pursuing B.tech in IIIT based in{" "}
+            software developer based
+            in{" "}
             <span className="text-gray-900 dark:text-stone-100 italic">
-              kerala,india
+              Kerala,India
             </span>
             , specializing in agentic AI and high performance blockchain systems.
-          </p>
+            Currently pursuing B.tech in{" "}
+            <span className="text-gray-900 dark:text-stone-100">IIIT</span> </p>
+
           <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
             connect with me on
           </p>
