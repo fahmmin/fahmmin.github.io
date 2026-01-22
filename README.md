@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fahmin - Portfolio & Blog
 
-## Getting Started
+A minimalist, high-performance personal portfolio and blog built with the latest web technologies. This project showcases my projects, experience, and writings with a focus on clean design, typography, and speed.
 
-First, run the development server:
+![Portfolio Preview](public/og.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Bundler**: [Turbopack](https://nextjs.org/docs/architecture/turbopack)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language**: TypeScript
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Theming**: [next-themes](https://github.com/pacocoursey/next-themes) (Dark/Light mode)
+- **Deployment**: Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Dynamic Content**: Projects and Experience data managed centrally in `lib/data.ts` for easy updates.
+- **Responsive Design**: Fully responsive layout optimized for mobile and desktop.
+- **Dark Mode**: System-aware dark mode toggle.
+- **Performance**: Static Generation (SSG) for lightning-fast page loads.
+- **Typography**: Uses `Geist` and `Playfair Display` for a sophisticated reading experience.
+- **Interactive Elements**: Micro-interactions, hover effects, and filtered views (e.g., Proof of Work).
 
-## Learn More
+## 🛠️ Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/fahmmin/fahmmin.github.io.git
+    cd fahmmin.github.io
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    # or
+    pnpm dev
+    ```
 
-## Deploy on Vercel
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/`: Next.js App Router pages and layouts.
+- `app/components/`: Reusable UI components (Navbar, Projects, Experience, etc.).
+- `lib/data.ts`: Centralized data source for projects, experience, and social links.
+- `lib/posts.ts`: Blog post definitions.
+- `public/`: Static assets (images, fonts, PDFs).
+
+## 🎨 Customization
+
+To personalize this portfolio:
+
+1.  **Update Data**: Modify `lib/data.ts` to update your general info, social links, projects, and experience/timeline.
+2.  **Update Resume**: Replace `public/Fahmin_Resume.pdf` with your own resume file.
+3.  **Styles**: Tweak `app/globals.css` or Tailwind config for color scheme changes.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
