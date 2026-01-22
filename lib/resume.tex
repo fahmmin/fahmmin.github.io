@@ -1,0 +1,209 @@
+% RenderCV-based resume for Fahmin Mohammed KK
+% One-page optimized version
+
+\documentclass[10pt, letterpaper]{article}
+
+% ============ PACKAGES & CONFIGURATION ============
+\usepackage[
+  ignoreheadfoot,
+  top=1.8cm,
+  bottom=1.6cm,
+  left=2cm,
+  right=2cm,
+  footskip=0.8cm
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0,0,0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[colorlinks=true, urlcolor=primaryColor]{hyperref}
+\usepackage{bookmark}
+\usepackage{paracol}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{changepage}
+
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% ============ GLOBAL TIGHTENING ============
+\raggedright
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\topsep}{2pt}
+\setlength{\partopsep}{0pt}
+\setlength{\itemsep}{1pt}
+
+% ============ SECTION STYLE ============
+\titleformat{\section}
+  {\needspace{3\baselineskip}\bfseries\large}
+  {}
+  {0pt}
+  {}
+  [\vspace{0.5pt}\titlerule\vspace{2pt}]
+
+% Bullet style
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% ============ CUSTOM ENVIRONMENTS ============
+\newenvironment{highlights}{
+\begin{itemize}[topsep=1pt, parsep=0pt, partopsep=0pt, itemsep=1pt, leftmargin=10pt]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{\begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[1]{
+  \onecolentry
+  \def\secondColumn{#1}
+  \setcolumnwidth{\fill, 4.3cm}
+  \begin{paracol}{2}
+}{
+  \switchcolumn \raggedleft \secondColumn
+  \end{paracol}
+  \endonecolentry
+}
+
+% ============ DOCUMENT START ============
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+  {\Huge \textbf{Fahmin Mohammed KK}} \\[-2pt]
+  Kerala, India \;|\;
+  \href{mailto:kkfahmin@gmail.com}{kkfahmin@gmail.com} \;|\;
+  linkedin.com/in/fahminmohammed \;|\;
+  fahmin.me \;|\;
+  github.com/fahmmin \;|\;
+  +91 9446461023
+\end{center}
+
+% ---------- ABOUT ----------
+\section{About Me}
+\begin{onecolentry}
+\item A polymath who loves hackathons and build and ship products for fun.
+\item Hands-on experience in AI and Web3.
+\end{onecolentry}
+
+% ---------- ABOUT ----------
+\section{Technical Skills}
+
+\begin{onecolentry}
+  \textbf{Web3 Development:} Smart contract development (Solidity), decentralized applications (dApp) architecture, Ethereum Virtual Machine (EVM)-based blockchains, wallet integration, on-chain and off-chain data integration, Decentralized identity solutions, decentralized finance (DeFi), and NFT protocols. 
+      \vspace{0.5em}
+
+  \textbf{Web2 Development:} RESTful APIs, GraphQL, Microservices architecture , Front-end development,OAuth2, JWT, CI/CD.
+    \vspace{0.5em}
+
+  \textbf{Cloud \& DevOps:} AWS/GCP, Dockerization
+\end{onecolentry}
+
+% ---------- EXPERIENCE ----------
+\section{Experience}
+
+
+
+\begin{twocolentry}{Nov 2025 -- Present}
+\textbf{AI Engineer}, Hastus Energy
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Building AI-native systems for energy optimization and operational intelligence.
+  \item Developing multi-agent AI pipelines, CRM automation, and predictive analytics.
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{Jun 2025 -- Present}
+\textbf{SDE Intern}, RootVestors
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Designing and scaling backend infrastructure for a gamified ed-tech platform.  
+  \item Worked on UI/UX and Product development for the gamified dashboard  
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{Nov 2025 -- Present}
+\textbf{Founder \& Lead Engineer}, ObsiFlow \textit{(Backed by Flare Launchpad)}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Selected for Flare Network Launchpad incubation to build DeFAI forensic infrastructure.
+  \item Architecting TEE-secured cross-chain surveillance using Flare Data Connector and AI intent parsing.
+  \item Engineering x402 micropayment gateway for trustless machine-to-machine data monetization.
+\end{highlights}
+\end{onecolentry}
+
+% ---------- PROJECTS ----------
+\section{Projects}
+
+\begin{twocolentry}{Sui, Walrus, React}
+\textbf{CultureDrops – Permanent Cultural Preservation Platform}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Built decentralized platform for permanent cultural media storage using Walrus.
+  \item Implemented verifiable creator ownership and on-chain provenance on Sui.
+  \item \textbf{Winner – ETHIndia x Walrus Foundation Hackathon}.
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{Python, Llama 3.1, RAG}
+\textbf{Project Lumen – AI-Native Financial Intelligence System}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Built 20+ agent RAG-based financial audit system with automated reasoning.
+  \item Android app for SMS-based extraction with Ethereum audit logging.
+  \item \textbf{1st Place – Hack-a-Sol AI/ML Track}.
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{Solidity, React, IPFS}
+\textbf{DigiWill – NFT-Based Digital Inheritance System}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item NFT-based digital inheritance with inactivity-triggered asset transfer.
+  \item IPFS-backed metadata with EVM verification.
+  \item \textbf{Winner – Web3 Track, IIIT NR Hackathon}.
+\end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{Python, Gemini, Ethereum}
+\textbf{RAG Reward Chatbot – Incentivized Learning System}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+  \item Multi-stage RAG pipeline with on-chain incentive distribution.
+  \item \textbf{Winner – AI/ML Track (AI/ML + Web3 Hackathon)}.
+\end{highlights}
+\end{onecolentry}
+
+\section{Languages}
+\begin{onecolentry}
+English (Fluent), Malayalam (Fluent), Hindi (Professional), Tamil (Professional)
+\end{onecolentry}
+
+\end{document}
