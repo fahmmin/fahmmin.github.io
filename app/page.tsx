@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Link from "next/link";
 import GithubContributions from "./components/GithubContributions";
 import { SOCIAL_LINKS } from "@/lib/data";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -35,7 +35,8 @@ export default function Home() {
               const Icon = link.name === 'github' ? FaGithub :
                 link.name === 'linkedin' ? FaLinkedin :
                   link.name === 'X' ? FaXTwitter :
-                    link.name === 'email' ? MdEmail : null;
+                    link.name === 'medium' ? FaMedium :
+                      link.name === 'email' ? MdEmail : null;
               return (
                 <a
                   key={link.name}

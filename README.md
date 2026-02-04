@@ -16,6 +16,7 @@ A minimalist, high-performance personal portfolio and blog built with the latest
 
 ## ✨ Features
 
+- **Blog (Sanity CMS)**: Blog posts are managed in [Sanity](https://sanity.io). Run the studio to create posts; the site shows them on `/blog` and homepage “Recent Published”.
 - **Dynamic Content**: Projects and Experience data managed centrally in `lib/data.ts` for easy updates.
 - **Responsive Design**: Fully responsive layout optimized for mobile and desktop.
 - **Dark Mode**: System-aware dark mode toggle.
@@ -52,8 +53,24 @@ A minimalist, high-performance personal portfolio and blog built with the latest
 - `app/`: Next.js App Router pages and layouts.
 - `app/components/`: Reusable UI components (Navbar, Projects, Experience, etc.).
 - `lib/data.ts`: Centralized data source for projects, experience, and social links.
-- `lib/posts.ts`: Blog post definitions.
+- `lib/sanity.ts`: Sanity client and GROQ queries for blog posts.
+- `sanity/`: Sanity Studio (schemas: **post**, **category**). Run with `pnpm studio`.
 - `public/`: Static assets (images, fonts, PDFs).
+
+## 📝 Blog (Sanity CMS)
+
+1. **Create a Sanity project** at [sanity.io/manage](https://sanity.io/manage) and copy your **Project ID**.
+2. **Configure env**: Copy `.env.example` to `.env.local` and set:
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID=<your-project-id>`
+   - `NEXT_PUBLIC_SANITY_DATASET=production`
+3. **Run the Studio** (to create and edit posts):
+   ```bash
+   pnpm studio
+   ```
+   Studio runs at [http://localhost:3333](http://localhost:3333). Create **Categories** and **Blog Post** documents; set a slug and publish.
+4. **Site**: The blog list is at `/blog`; each post is at `/blog/[slug]`. “Recent Published” on the homepage shows the latest 3 posts.
+
+Without a configured project ID, the blog and homepage show empty states and the app still builds and runs.
 
 ## 🎨 Customization
 
