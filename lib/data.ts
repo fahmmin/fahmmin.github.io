@@ -11,7 +11,7 @@ export const GENERAL_INFO = {
 export const SOCIAL_LINKS = [
     { name: 'github', url: 'https://github.com/fahmmin' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/fahminmohammed' },
-    { name: 'X', url: 'https://x.com/fahmin_md' },
+    { name: 'X', url: 'https://x.com/fahmindot' },
     { name: 'medium', url: 'https://medium.com/@fahmin' },
     { name: 'email', url: 'mailto:kkfahmin@gmail.com' },
 ];
