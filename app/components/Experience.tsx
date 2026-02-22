@@ -31,7 +31,7 @@ export default function Experience() {
                             company={exp.company}
                             role={exp.title}
                             period={exp.duration}
-                            type="full-time"
+                            type={exp.type ?? "full-time"}
                             icon={<span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>}
                             isCurrent={exp.duration.toLowerCase().includes("present")}
                             description={exp.description}
