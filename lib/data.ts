@@ -408,6 +408,7 @@ export const MY_EXPERIENCE: IExperience[] = [
         title: 'AI Engineer',
         company: 'Hastus Energy',
         duration: 'Nov 2025 - Present',
+        type: 'part-time',
         description: [
             'Building AI-native systems for energy optimization and operational intelligence.',
             'Developing multi-agent AI pipelines, CRM automation, and predictive analytics.'
@@ -416,6 +417,7 @@ export const MY_EXPERIENCE: IExperience[] = [
         title: 'SDE Intern',
         company: 'RootVestors',
         duration: 'Jun 2025 - Present',
+        type: 'part-time',
         description: [
             'Designing and scaling backend infrastructure for a gamified ed-tech platform.',
             'Worked on UI/UX and Product development for the gamified dashboard.'

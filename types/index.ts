@@ -27,4 +27,5 @@ export interface IExperience {
     company: string;
     duration: string;
     description: string[];
+    type?: 'full-time' | 'part-time';
 }
