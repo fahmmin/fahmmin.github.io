@@ -55,6 +55,27 @@ export default function Home() {
             i work on building scalable systems on ethereum, focusing on consensus
             mechanisms, network protocols, and distributed architecture.
           </p>
+ <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
+  member{" "}
+  <a
+    href="https://x.com/athenaf0ss"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    @AthenaF0SS
+  </a>{" "}
+  and Maven{" "}
+  <a
+    href="http://risein.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    @Risein
+  </a>
+</p>
+          
           <p className="text-sm text-gray-600 dark:text-stone-400 leading-relaxed">
             i write about AI and blockchain infrastructure and distributed systems.
             recently published about how{" "}
